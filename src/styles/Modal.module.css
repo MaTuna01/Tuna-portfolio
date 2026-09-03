@@ -1,0 +1,38 @@
+/* 임시 스캐폴딩 — 내일 팀과 디자인 얹으며 교체 */
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgb(0 0 0 / 0.45);   /* 뒤가 어두워져야 '모달'로 보임 */
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    width: min(720px, 100%);
+    max-height: 85dvh;
+    background: #fff;                 /* 흰 배경이라야 글자가 읽힘 */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.title { margin: 0; }
+.close { border: none; background: transparent; cursor: pointer; font-size: 1rem; }
+
+.body {
+    padding: 20px;
+    overflow-y: auto;                 /* 긴 본문 스크롤 — 이건 구조라 필수 */
+    overscroll-behavior: contain;
+}

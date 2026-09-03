@@ -10,7 +10,7 @@ export default function App() {
   return (
       <div className={styles.app}>
           <header className={styles.header}>
-              <h2>Tuna's Portfolio</h2>
+              <Link to='/'><h2>Tuna's Portfolio</h2></Link>
               <nav>
                   <ul className={styles.menus}>
                       <li><Link to='/'>About</Link></li>

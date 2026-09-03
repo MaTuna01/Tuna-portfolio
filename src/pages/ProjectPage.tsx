@@ -12,7 +12,7 @@ export default function ProjectPage() {
     if (error)     return <p>에러: {String(error)}</p>
 
     return (
-        <main>
+        <section>
             <div><h2>projects</h2></div>
 
             <ul>
@@ -31,6 +31,6 @@ export default function ProjectPage() {
 
             {/* 챗봇 버튼 — 클릭 이벤트는 나중. 지금은 자리만 */}
             <button type="button" aria-label="프로젝트 챗봇">💬</button>
-        </main>
+        </section>
     )
 }

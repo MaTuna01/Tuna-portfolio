@@ -1,0 +1,16 @@
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;      /* ← 정사각형을 원으로 */
+    object-fit: cover;       /* ← 사진 비율 안 찌그러지게 크롭 */
+}
+.about {
+    display: flex;
+    align-items: center;   /* 사진과 소개를 세로 중앙 정렬 */
+    gap: 24px;             /* 사진-소개 사이 간격 */
+}
+
+/* 모바일에선 위아래로 쌓기 */
+@media (max-width: 768px) {
+    .about { flex-direction: column; }
+}

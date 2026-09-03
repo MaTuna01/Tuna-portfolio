@@ -1,16 +1,54 @@
+.landing{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 32px 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
 .avatar {
     width: 200px;
     height: 200px;
-    border-radius: 50%;      /* ← 정사각형을 원으로 */
-    object-fit: cover;       /* ← 사진 비율 안 찌그러지게 크롭 */
+    border-radius: 50%;
+    object-fit: cover;
 }
 .about {
     display: flex;
-    align-items: center;   /* 사진과 소개를 세로 중앙 정렬 */
-    gap: 24px;             /* 사진-소개 사이 간격 */
+    align-items: center;
+    gap: 24px;
 }
 
-/* 모바일에선 위아래로 쌓기 */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.skillGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skillList {
+    list-style: none; padding: 0; margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.skillItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 72px;
+}
+.itemName {
+    align-items: center;
+}
+.skillItem img {
+    object-fit: contain;
+}
 @media (max-width: 768px) {
-    .about { flex-direction: column; }
+    .about { flex-direction: column; text-align: center; }
 }

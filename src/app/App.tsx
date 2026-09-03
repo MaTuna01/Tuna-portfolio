@@ -17,9 +17,9 @@ export default function App() {
               <Link to='/'><h2>Tuna's Portfolio</h2></Link>
               <nav>
                   <ul className={styles.menus}>
-                      <li><Link to='/'>About</Link></li>
-                      <li><Link to='/projects'>Projects</Link></li>
-                      <li><Link to='/career'>Career</Link></li>
+                      <li className={styles.items}><Link to='/'>About</Link></li>
+                      <li className={styles.items}><Link to='/projects'>Projects</Link></li>
+                      <li className={styles.items}><Link to='/career'>Career</Link></li>
                   </ul>
               </nav>
           </header>

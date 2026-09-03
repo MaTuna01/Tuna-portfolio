@@ -40,7 +40,7 @@ export default function LandingPage() {
             <section className={styles.about}>
                 <div/>
                     <img className={styles.avatar} src={profileImg}/>
-                    <ul>
+                    <ul className={styles.profile}>
                         <li>2001.03.17</li>
                         <li>phone:010-6277-5386</li>
                         <li>email : ma775100@gmail.com</li>

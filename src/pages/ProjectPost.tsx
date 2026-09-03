@@ -1,27 +1,22 @@
 import {useParams} from "react-router-dom";
-import {useEffect, useState} from "react";
 import ReactMarkDown from "react-markdown"
+import {useProjectBody} from "../shared/lib/useProjectBody.ts";
 
 
-export default function ProjectPage() {
+export default function ProjectPost() {
 
     const {slug} = useParams()
-    const [content, setContent] = useState("")
+    // useProjectBody 훅으로 상태관리를 한번에 대체
+    const {data: content, isLoading, error} = useProjectBody(slug)
 
-    useEffect(() => {
-        fetch(`/projects/${slug}.md`)
-            .then(res => {
-                if(!res.ok) throw new Error('없는 글')
-                return res.text()
-            })
-            .then(setContent)
-            .catch(() => setContent('#글을 찾을 수 없습니다'))
-    }, [slug])
+    if (isLoading) return <p>불러오는 중...</p>
+    if (error) return <p>글을 찾을 수 없습니다.</p>
 
     return (
         <>
             <h1>Project</h1>
-            <ReactMarkDown>{content}</ReactMarkDown>
+            {/*content의 타입이 undefined가 올 경우를 방어 하기위한 조치*/}
+            <ReactMarkDown>{content ?? ''}</ReactMarkDown>
         </>
     )
 }

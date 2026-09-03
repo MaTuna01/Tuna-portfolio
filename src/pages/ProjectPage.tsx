@@ -22,7 +22,7 @@ export default function projectPage() {
         <ul>
             {projects?.map(project => (
                 <li key={project.id}>
-                    <Link to={`/project/${project.slug}`}>
+                    <Link to={`/projects/${project.slug}`}>
                         {project.title}
                     </Link>
                     <p>{project.summary}</p>

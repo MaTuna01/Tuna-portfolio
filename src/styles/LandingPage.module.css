@@ -6,24 +6,37 @@
     flex-direction: column;
     gap: 48px;
 }
+.slogan{
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+.about {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    place-items: center;
+}
 .avatar {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-}
-.about {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+    justify-self: center;
 }
 .profile {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 16px;
+    font-size: 16px;
 }
-
+.infoList {
+    text-align: left;
+}
 .skills {
     display: flex;
     flex-direction: column;
@@ -37,7 +50,9 @@
 }
 
 .skillList {
-    list-style: none; padding: 0; margin: 0;
+    list-style: none;
+    padding: 0 16px 0 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
@@ -56,6 +71,15 @@
 .skillItem img {
     object-fit: contain;
 }
+
+.qualification {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 16px 0;
+}
+
 @media (max-width: 768px) {
     .about { flex-direction: column; text-align: center; }
 }

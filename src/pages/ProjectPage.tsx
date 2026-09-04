@@ -1,6 +1,7 @@
 import {useQuery} from "@tanstack/react-query";
 import {getProjects} from "../shared/api/getProjects.ts";
 import {Link, useLocation} from "react-router-dom";
+import style from "../styles/ProjectPage.module.css"
 
 export default function ProjectPage() {
     const location = useLocation()
@@ -13,24 +14,18 @@ export default function ProjectPage() {
 
     return (
         <section>
-            <div><h2>projects</h2></div>
-
+            <h2 className={style.project}>projects</h2>
+            <hr/>
             <ul>
                 {projects?.map(project => (
                     <li key={project.id}>
-                        <Link
-                            to={`/projects/${project.slug}`}
-                            state={{ backgroundLocation: location }}   // ⬅ 모달 대비. 지금 넣어도 무해
-                        >
+                        <Link to={`/projects/${project.slug}`} state={{ backgroundLocation: location }}>
                             <h3>{project.title}</h3>
                             <p>{project.summary}</p>
                         </Link>
                     </li>
                 ))}
             </ul>
-
-            {/* 챗봇 버튼 — 클릭 이벤트는 나중. 지금은 자리만 */}
-            <button type="button" aria-label="프로젝트 챗봇">💬</button>
         </section>
     )
 }

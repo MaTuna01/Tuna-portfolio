@@ -1,16 +1,18 @@
-import {Careers} from "../entity/model/career.ts";
+import {Careers} from "../entity/model/types/career.ts";
+import style from "../styles/CareerPage.module.css"
 
 export default function careerPage() {
 
     return (
         <section>
-            <div><h2>Career</h2></div>
-            <ul>
+            <h2 className={style.career}>Career/Education</h2>
+            <hr/>
+            <ul className={style.list}>
                 {Careers.map(c => (
-                    <li key={c.id}>
-                        <span>{c.period}</span>
-                        <h3>{c.title}</h3>
+                    <li key={c.id}  className={style.card}>
+                        <h3 className={style.title}>{c.title}</h3>
                         <p>{c.desc}</p>
+                        <span>{c.period}</span>
                     </li>
                 ))}
             </ul>

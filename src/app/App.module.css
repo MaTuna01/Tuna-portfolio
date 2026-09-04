@@ -1,6 +1,6 @@
 .app {
     min-height: 100vh;
-    padding: 24px 32px 24px;
+    padding: 8px 32px 8px;
     display: flex;
     flex-direction: column;
 }
@@ -8,6 +8,7 @@
 .header {
     display: flex;
     justify-content: space-between;
+    margin: 8px 32px 8px;
 }
 
 .menus {
